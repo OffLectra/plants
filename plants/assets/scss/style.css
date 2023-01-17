@@ -232,6 +232,7 @@ body {
 
 @media (max-width: 650px) {
   .nav-list-item {
+    cursor: pointer;
     width: 100%;
     text-align: center;
   }
