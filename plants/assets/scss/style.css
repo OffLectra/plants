@@ -49,6 +49,16 @@ body {
   color: var(--orange);
   cursor: pointer;
 }
+.button.active {
+  background: var(--orange);
+  color: white;
+}
+.button.nonactive {
+  border: var(--dark-gray);
+  background: #b9b9b9;
+  color: white;
+  cursor: default;
+}
 @media (max-width: 381px) {
   .button {
     width: 121px;
@@ -56,11 +66,6 @@ body {
     font-size: 15px;
     line-height: 20px;
   }
-}
-
-.button:hover {
-  background: var(--orange);
-  color: white;
 }
 
 [class*=__wrapper] {
@@ -729,6 +734,9 @@ body {
   border: 1px solid #E3E1D5;
   border-radius: 20px;
   overflow: hidden;
+}
+.service__card-box.blur { /* Chrome, Safari, Opera */
+  filter: blur(7px);
 }
 @media (max-width: 769px) {
   .service__card-box {
