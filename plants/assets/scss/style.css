@@ -48,12 +48,14 @@ body {
   line-height: 26px;
   color: var(--orange);
   cursor: pointer;
+  transition: all 0.5s;
 }
 .button.active {
   background: var(--orange);
   color: white;
 }
 .button.nonactive {
+  transition: all 0.1s;
   border: var(--dark-gray);
   background: #b9b9b9;
   color: white;
@@ -734,6 +736,7 @@ body {
   border: 1px solid #E3E1D5;
   border-radius: 20px;
   overflow: hidden;
+  transition: all 0.5s;
 }
 .service__card-box.blur { /* Chrome, Safari, Opera */
   filter: blur(7px);
