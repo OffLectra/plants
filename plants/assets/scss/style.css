@@ -48,6 +48,18 @@ body {
   line-height: 26px;
   color: var(--orange);
   cursor: pointer;
+  transition: all 0.5s;
+}
+.button.active {
+  background: var(--orange);
+  color: white;
+}
+.button.nonactive {
+  transition: all 0.1s;
+  border: var(--dark-gray);
+  background: #b9b9b9;
+  color: white;
+  cursor: default;
 }
 @media (max-width: 381px) {
   .button {
@@ -56,11 +68,6 @@ body {
     font-size: 15px;
     line-height: 20px;
   }
-}
-
-.button:hover {
-  background: var(--orange);
-  color: white;
 }
 
 [class*=__wrapper] {
@@ -729,6 +736,10 @@ body {
   border: 1px solid #E3E1D5;
   border-radius: 20px;
   overflow: hidden;
+  transition: all 0.5s;
+}
+.service__card-box.blur { /* Chrome, Safari, Opera */
+  filter: blur(7px);
 }
 @media (max-width: 769px) {
   .service__card-box {
@@ -877,24 +888,129 @@ body {
 
 .prices__form-block {
   width: 332px;
-  height: 283px;
+  min-height: 283px;
+  box-sizing: border-box;
+  border: 1px solid #E3E1D5;
+  border-radius: 20px;
+  margin-top: 60px;
   gap: 32px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  box-sizing: border-box;
-  border: 1px solid #E3E1D5;
-  border-radius: 20px;
-  margin-top: 60px;
+}
+.prices__form-block.active {
+  gap: 0px;
 }
 @media (max-width: 381px) {
   .prices__form-block {
-    padding-left: 0px;
     margin-top: 37px;
     width: 224px;
-    height: 235px;
+    min-height: 235px;
     gap: 14px;
+  }
+}
+
+.acc-item-block {
+  display: none;
+  width: 250px;
+  height: 0px;
+}
+.acc-item-block.active {
+  display: block;
+  height: 104px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background: #D6E7D2;
+  padding: 0px 40px 12px 40px;
+}
+@media (max-width: 381px) {
+  .acc-item-block {
+    width: 180px;
+    padding: 0px 40px 12px 30px;
+  }
+}
+
+hr {
+  width: 100%;
+  margin: 0 auto;
+  border: 0.5px solid #AEA1A1;
+  margin-bottom: 6px;
+}
+
+.acc-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.acc-text {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 10px;
+  line-height: 10px;
+  color: #717171;
+  margin: 0px 0px 6px 0px;
+}
+
+.acc-price {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 20px;
+  color: #000000;
+}
+
+.acc-dollar {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 20px;
+  color: #E06733;
+}
+
+.span-price {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  color: #E06733;
+}
+
+.order-btn {
+  width: 86px;
+  height: 25px;
+  background: #FFFFFF;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin: 0px 0px 6px 0px;
+}
+
+.order-link {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  color: #717171;
+  text-decoration: none;
+}
+
+.prices__form-item-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (max-width: 381px) {
+  .prices__form-item-block {
+    width: 100%;
+    height: auto;
   }
 }
 
@@ -911,9 +1027,14 @@ body {
   line-height: 20px;
   color: #000000;
   display: flex;
+  align-items: center;
   justify-content: space-between;
   padding: 16px 40px 16px 40px;
   cursor: pointer;
+}
+.prices__form-btn.active {
+  border-radius: 20px 20px 0px 0px;
+  background: #D6E7D2;
 }
 @media (max-width: 381px) {
   .prices__form-btn {
@@ -924,7 +1045,7 @@ body {
   }
 }
 
-.form-btn-arrow {
+.arrow-block {
   width: 16px;
   height: 16px;
   background: #D9D9D9;
@@ -932,6 +1053,22 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.arrow-block.active {
+  transform: rotate(-180deg);
+  background: var(--dark-gray);
+}
+
+.arrow {
+  width: 3px;
+  height: 3px;
+  border-top: 1px solid var(--dark-gray);
+  border-right: 1px solid var(--dark-gray);
+  transform: rotate(135deg);
+}
+.arrow.active {
+  border-top: 1px solid white;
+  border-right: 1px solid white;
 }
 
 .prices__right-column {
