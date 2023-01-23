@@ -927,7 +927,7 @@ body {
 @media (max-width: 381px) {
   .acc-item-block {
     width: 180px;
-    padding: 0px 40px 12px 30px;
+    padding: 0px 40px 12px 30px !important;
   }
 }
 
@@ -953,6 +953,11 @@ hr {
   line-height: 10px;
   color: #717171;
   margin: 0px 0px 6px 0px;
+}
+@media (max-width: 381px) {
+  .acc-text {
+    font-size: 9px;
+  }
 }
 
 .acc-price {
