@@ -798,7 +798,7 @@ body {
     @media (max-width: 381px) {
         width: 180px;
         // height: 104px;
-        padding: 0px 40px 12px 30px;
+        padding: 0px 40px 12px 30px !important;
     }
 }
 
@@ -822,6 +822,9 @@ hr {
     line-height: 10px;
     color: #717171;
     margin: 0px 0px 6px 0px;
+    @media (max-width: 381px) {
+        font-size: 9px;
+    }
 }
 .acc-price {
     font-family: 'Inter';
