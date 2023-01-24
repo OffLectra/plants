@@ -5,6 +5,8 @@ const proBtn = document.querySelector('#pro');
 const pricesBtn = document.querySelectorAll('.prices__form-btn');
 const pricesForm = document.querySelector('.prices__form-block');
 
+const pricesFormItemBlock = document.querySelectorAll('.prices__form-item-block');
+
 const arrowBlock = document.querySelectorAll('.arrow-block');
 const arrow = document.querySelectorAll('.arrow');
 
@@ -13,8 +15,14 @@ function checkAcc() {
         (standardBtn.classList.contains('active')) ||
         (proBtn.classList.contains('active'))) {
             pricesForm.classList.add('active');
+            for (i = 0; i < 3; i++) {
+                pricesFormItemBlock[i].classList.add('active');
+            }
     } else {
         pricesForm.classList.remove('active');
+        for (i = 0; i < 3; i++) {
+            pricesFormItemBlock[i].classList.remove('active');
+        }
     }
 }
 
@@ -36,6 +44,7 @@ function closeAcc(btn) {
 }
 if (basicsBtn && standardBtn && proBtn) {
     basicsBtn.addEventListener('click', e => {
+
         openAcc(basicsBtn)
         checkAcc()
         activateArrow(0)
