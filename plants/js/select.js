@@ -133,6 +133,7 @@ if (selectBlock) {
     nyc.addEventListener('click', e => {
         if(nyc.classList.contains('active')) {
             closeCurrCard(nyc, 1);
+            tyanBlock.classList.remove('active');
             document.querySelector(".currCity").innerHTML = "City"
         } else {
             tyanBlock.classList.add('active');
@@ -144,6 +145,7 @@ if (selectBlock) {
     yonkers.addEventListener('click', e => {
         if(yonkers.classList.contains('active')) {
             closeCurrCard(yonkers, 2);
+            tyanBlock.classList.remove('active');
             document.querySelector(".currCity").innerHTML = "City"
         } else {
             tyanBlock.classList.add('active');
@@ -155,6 +157,7 @@ if (selectBlock) {
     sherrill.addEventListener('click', e => {
         if(sherrill.classList.contains('active')) {
             closeCurrCard(sherrill, 3);
+            tyanBlock.classList.remove('active');
             document.querySelector(".currCity").innerHTML = "City"
         } else {
             tyanBlock.classList.add('active');
