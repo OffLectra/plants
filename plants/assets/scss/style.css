@@ -1388,9 +1388,9 @@ hr {
   letter-spacing: 0.05em;
   color: #000000;
   width: 100%;
-  max-width: 190px;
   margin-right: 10px;
   text-align: left;
+  max-width: 130px;
 }
 @media (max-width: 480px) {
   .info-card__param {
